@@ -48,9 +48,9 @@ These tables are linked using **primary and foreign keys** (e.g., `ProductID`, `
 
 ## 🖼️ Dashboard Preview
 
-<img width="863" height="495" alt="image" src="https://github.com/user-attachments/assets/5ad50934-6418-4b3c-927d-9d75a7cb750d" />
+<img width="870" height="495" alt="image" src="https://github.com/user-attachments/assets/1f073e63-029c-4349-a63d-2d80f75c8e30" />
 
-![Sales Dashboard Overview](images/dashboard_preview.png)
+<img width="863" height="495" alt="image" src="https://github.com/user-attachments/assets/5ad50934-6418-4b3c-927d-9d75a7cb750d" />
 
 ---
 
