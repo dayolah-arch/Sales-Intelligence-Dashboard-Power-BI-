@@ -56,7 +56,7 @@ These tables are linked using **primary and foreign keys** (e.g., `ProductID`, `
 
 ## ⚙️ How to Use
 
-1. Open the .pbix https://drive.google.com/drive/u/0/folders/1t4G117Vk14tr-dP31nw5p0KsLkAfQ3DO file in **Power BI Desktop**  
+1. Open the Power BI Desktop 
 2. Load or connect your dataset if using custom data  
 3. Refresh data to update visuals and KPIs  
 4. Interact with filters and slicers for deeper insights  
