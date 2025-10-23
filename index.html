@@ -2,269 +2,301 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Adeola Enomhensike — Data Strategist</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Adeola Enomhensike — Data Strategist Portfolio</title>
   <meta name="description" content="Portfolio of Adeola Enomhensike — Data Strategist. Power BI, Excel, SQL, PowerPoint projects." />
-
   <style>
     :root{
-      --bg:#0b1020; --card:#0f1724; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
+      --bg:#050613; --panel:#0b1220; --muted:#9aa9bd; --accent:#00d0db; --glow:rgba(0,208,219,0.15);
+      --card-grad: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,var(--bg),#04050a);color:#e6eef8}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#02030a,var(--bg));color:#e6f0f7; -webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none}
-
-    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+    .container{max-width:1100px;margin:28px auto;padding:20px}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;gap:12px;align-items:center}
-    .avatar{width:64px;height:64px;border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.06)}
+    .avatar{width:64px;height:64px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.04)}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
     h1{font-size:20px;margin:0}
-    .lead{font-size:13px;color:var(--muted);margin-top:4px}
-
+    .tag{font-size:13px;color:var(--muted);margin-top:4px}
     nav a{margin-left:14px;font-size:14px;color:var(--muted)}
     nav a:hover{color:#fff}
-
     /* layout */
-    .grid{display:grid;grid-template-columns:320px 1fr;gap:20px;margin-top:20px}
-
-    /* left column */
-    .card{background:linear-gradient(180deg,var(--card), #081023);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-    .sidebar .bio{display:flex;flex-direction:column;gap:12px}
-    .big{font-size:34px;font-weight:700}
-    .muted{color:var(--muted);font-size:13px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg, rgba(6,182,212,0.12), rgba(96,165,250,0.04));border:1px solid rgba(6,182,212,0.12);color:var(--accent);cursor:pointer}
-
-    /* main column */
-    .hero{display:flex;align-items:flex-start;gap:18px}
-    .about-card{flex:1;padding:18px;border-radius:12px;background:linear-gradient(180deg,var(--glass),var(--glass-2));border:1px solid rgba(255,255,255,0.03)}
-    .mission{color:var(--muted);margin-top:8px}
-
-    section{margin-top:18px}
-    h2{margin:0 0 12px 0;font-size:16px}
-
+    .hero{display:grid;grid-template-columns:320px 1fr;gap:20px;margin-top:18px}
+    .card{background:var(--card-grad);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .title{font-size:16px;margin:0 0 8px 0}
+    .lead{color:var(--muted);font-size:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg, rgba(0,208,219,0.07), rgba(32,138,255,0.02));border:1px solid rgba(0,208,219,0.08);color:var(--accent);cursor:pointer}
+    .btn:hover{box-shadow:0 6px 18px var(--glow)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-size:13px}
+    /* projects */
     .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-    .project{background:linear-gradient(180deg,#071026,#07101a);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);transition:transform .18s ease, box-shadow .18s}
-    .project:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(2,6,23,0.6)}
+    .project{background:linear-gradient(180deg,#061123,#07101a);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);transition:transform .18s ease, box-shadow .18s}
+    .project:hover{transform:translateY(-6px);box-shadow:0 18px 48px rgba(0,0,0,0.6)}
     .project img{width:100%;height:140px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
-    .tool{display:inline-block;font-size:12px;padding:6px 8px;margin-right:6px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
-    .project a.repo{font-size:13px;color:var(--accent);display:inline-block;margin-top:8px}
-
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
-
+    .tool{display:inline-block;font-size:12px;padding:5px 8px;margin-right:6px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+    .repo{display:inline-block;margin-top:8px;color:var(--accent)}
+    /* testimonials */
     .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .quote{padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
-
+    .quote{padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .qtitle{font-weight:600;color:#fff;margin-bottom:6px}
+    /* contact */
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:#e6eef8;width:100%}
-    button[type=submit]{background:var(--accent);color:#021024;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
-
+    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:#e6f0f7;width:100%;font-size:14px}
+    button[type=submit]{background:var(--accent);color:#021024;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
     footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-
     /* responsive */
-    @media (max-width:900px){.grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.testimonials{grid-template-columns:1fr}}
-
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.testimonials{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
     /* small animations */
-    .fade-in{animation:fadeIn .6s ease both}
+    .fade{animation:fadeIn .6s ease both}
     @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .glow{box-shadow:0 6px 18px rgba(0,208,219,0.12)}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
       <div class="brand">
         <div class="avatar"><img src="./Screenshot 2025-08-31 005602.png" alt="Adeola" /></div>
         <div>
           <h1>Adeola Enomhensike</h1>
-          <div class="lead">Data Strategist • Power BI | Excel | SQL | PowerPoint</div>
+          <div class="tag">Data Strategist • Power BI | Excel | SQL | PowerPoint</div>
         </div>
       </div>
 
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <div class="grid">
-      <!-- left sidebar -->
-      <aside class="sidebar">
-        <div class="card bio fade-in">
+    <main class="hero" style="margin-top:18px">
+      <!-- left column -->
+      <aside>
+        <div class="card fade">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <div>
-              <div class="big">Data Strategist</div>
-              <div class="muted">I turn data into decisions — Power BI, Excel, SQL</div>
+              <div style="font-weight:700;font-size:18px">Data Strategist</div>
+              <div class="lead">I turn raw data into clear strategic insights</div>
             </div>
             <div>
-              <a class="btn" href="PLACEHOLDER_RESUME_LINK" download><svg xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><polyline points="7 10 12 15 17 10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline><line x1="12" y1="15" x2="12" y2="3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line></svg> Resume</a>
+              <a class="btn glow" href="PLACEHOLDER_RESUME_LINK" download>Download Resume</a>
             </div>
           </div>
 
-          <p style="margin-top:12px;color:var(--muted)">I love working on data — I don't mind being woken up to tackle millions of rows. I specialize in cleaning, modeling and visualizing messy datasets into actionable dashboards.</p>
+          <p class="lead" style="margin-top:12px;color:var(--muted)">
+            I love working on data — I don't mind being woken up to tackle millions of rows. I specialize in cleaning, modeling and visualizing messy datasets into actionable dashboards.
+          </p>
 
-          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="tool">Power BI</a>
-            <a class="tool">Excel</a>
-            <a class="tool">SQL</a>
-            <a class="tool">PowerPoint</a>
+          <div class="skills" style="margin-top:12px">
+            <div class="skill">Power BI</div>
+            <div class="skill">Excel</div>
+            <div class="skill">SQL</div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Data Modeling</div>
+            <div class="skill">DAX</div>
+            <div class="skill">Dashboard Design</div>
+            <div class="skill">Storytelling with Data</div>
           </div>
 
           <div style="margin-top:14px;display:flex;gap:8px">
-            <a href="mailto:dayolah@gmail.com" class="btn">Email</a>
-            <a href="https://www.linkedin.com/in/adeola-enomhensike" class="btn">LinkedIn</a>
+            <a class="btn" href="mailto:dayolah@gmail.com">Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/adeola-enomhensike" target="_blank">LinkedIn</a>
           </div>
         </div>
 
-        <div class="card fade-in" style="margin-top:14px">
-          <h3 style="margin:0 0 10px 0">Contact</h3>
-          <div class="muted">dayolah@gmail.com</div>
-          <div class="muted" style="margin-top:6px">GitHub: <a href="https://github.com/dayolah-arch" style="color:var(--accent)">github.com/dayolah-arch</a></div>
+        <div class="card fade" style="margin-top:14px">
+          <h3 class="title">Quick Links</h3>
+          <div class="lead"><strong>Email:</strong> <a href="mailto:dayolah@gmail.com">dayolah@gmail.com</a></div>
+          <div class="lead" style="margin-top:6px"><strong>GitHub:</strong> <a href="https://github.com/dayolah-arch" target="_blank">github.com/dayolah-arch</a></div>
         </div>
       </aside>
 
-      <!-- main content -->
-      <main>
-        <section id="about" class="fade-in">
-          <div class="about-card">
-            <h2>About</h2>
-            <p class="mission">I am a Data Strategist passionate about transforming raw data into clear, strategic insights. I love working on data so much I don't mind being woken up to tackle millions of rows — cleaning, modeling, and visualizing data until it tells a story.</p>
-            <p class="muted" style="margin-top:8px">Mission: To craft purposeful analytics and intuitive dashboards that empower teams to make confident, data-driven decisions.</p>
-          </div>
-        </section>
+      <!-- right column -->
+      <section style="min-width:0">
+        <!-- About -->
+        <div id="about" class="card fade">
+          <h2 class="title">About</h2>
+          <p class="lead" style="margin-top:6px">
+            I am a Data Strategist passionate about transforming raw data into clear, strategic insights. I love working on data so much I don't mind being woken up to tackle millions of rows — cleaning, modeling, and visualizing data until it tells a story.
+          </p>
+          <p class="lead" style="margin-top:8px;color:var(--muted)">Mission: To craft purposeful analytics and intuitive dashboards that empower teams to make confident, data-driven decisions.</p>
+        </div>
 
-        <section id="projects">
-          <h2>Projects</h2>
-          <div class="projects-grid">
-
-            <article class="project fade-in">
+        <!-- Projects -->
+        <div id="projects" style="margin-top:18px">
+          <h2 class="title">Projects</h2>
+          <div class="projects-grid" style="margin-top:8px">
+            <!-- ExpertEdge / Consultants -->
+            <article class="project fade">
               <img src="./68cc8e53-62c2-496a-9c7b-7c92e78508bc.png" alt="ExpertEdge Consulting Dashboard" />
-              <h3>ExpertEdge Consulting Group Analytics Dashboard</h3>
-              <p class="muted">Consulting project performance dashboard visualizing budget utilization, revenue by service type, workload trends, and project status.</p>
-              <div style="margin-top:8px">
-                <span class="tool">Power BI</span><span class="tool">Excel</span><span class="tool">PowerPoint</span>
-              </div>
-              <div style="margin-top:8px"><a class="repo" href="PLACEHOLDER_GITHUB_LINK_1">GitHub (placeholder)</a></div>
+              <h3 style="margin:8px 0 4px 0">ExpertEdge Consulting Group Analytics Dashboard</h3>
+              <div class="lead" style="color:var(--muted)">Consulting project performance dashboard visualizing budget utilization, revenue by service type and workload trends.</div>
+              <div style="margin-top:8px"><span class="tool">Power BI</span><span class="tool">Excel</span><span class="tool">PowerPoint</span></div>
+              <div><a class="repo" href="PLACEHOLDER_GITHUB_LINK_1" target="_blank">GitHub (placeholder)</a></div>
             </article>
 
-            <article class="project fade-in">
+            <!-- Healthcare -->
+            <article class="project fade">
               <img src="./5731e94b-3d0f-4fa1-9ae8-f5c9a283b666.png" alt="Healthcare Analytics Dashboard" />
-              <h3>Healthcare Analytics Dashboard</h3>
-              <p class="muted">Hospital performance and patient outcomes dashboard including admissions, billing, average stay and readmission rate insights.</p>
-              <div style="margin-top:8px">
-                <span class="tool">Power BI</span><span class="tool">Excel</span><span class="tool">PowerPoint</span>
-              </div>
-              <div style="margin-top:8px"><a class="repo" href="PLACEHOLDER_GITHUB_LINK_2">GitHub (placeholder)</a></div>
+              <h3 style="margin:8px 0 4px 0">Healthcare Analytics Dashboard</h3>
+              <div class="lead" style="color:var(--muted)">Hospital performance and patient outcomes dashboard with admissions, billing and readmission insights.</div>
+              <div style="margin-top:8px"><span class="tool">Power BI</span><span class="tool">Excel</span></div>
+              <div><a class="repo" href="PLACEHOLDER_GITHUB_LINK_2" target="_blank">GitHub (placeholder)</a></div>
             </article>
 
-            <article class="project fade-in">
+            <!-- HR -->
+            <article class="project fade">
               <img src="./df264da1-8c66-429b-b66d-ccdc1b2cf8cf.png" alt="HR Analytics Dashboard" />
-              <h3>HR Analytics Dashboard</h3>
-              <p class="muted">Workforce analytics report covering headcount, salary distribution, gender balance and departmental trends.</p>
-              <div style="margin-top:8px">
-                <span class="tool">Power BI</span><span class="tool">Excel</span><span class="tool">PowerPoint</span>
-              </div>
-              <div style="margin-top:8px"><a class="repo" href="PLACEHOLDER_GITHUB_LINK_3">GitHub (placeholder)</a></div>
+              <h3 style="margin:8px 0 4px 0">HR Analytics Dashboard</h3>
+              <div class="lead" style="color:var(--muted)">Workforce analytics covering headcount, salary distribution and gender balance.</div>
+              <div style="margin-top:8px"><span class="tool">Power BI</span><span class="tool">Excel</span></div>
+              <div><a class="repo" href="PLACEHOLDER_GITHUB_LINK_3" target="_blank">GitHub (placeholder)</a></div>
+            </article>
+
+            <!-- Sales 2021 #1 -->
+            <article class="project fade">
+              <img src="./sales-2021-1.png" alt="Sales Report 2021 - 1" />
+              <h3 style="margin:8px 0 4px 0">Sales Report 2021 — Dashboard (1)</h3>
+              <div class="lead" style="color:var(--muted)">Yearly sales performance and trend analysis (2021).</div>
+              <div style="margin-top:8px"><span class="tool">Power BI</span></div>
+              <div><a class="repo" href="PLACEHOLDER_GITHUB_LINK_4" target="_blank">GitHub (placeholder)</a></div>
+            </article>
+
+            <!-- Sales 2021 #2 -->
+            <article class="project fade">
+              <img src="./sales-2021-2.png" alt="Sales Report 2021 - 2" />
+              <h3 style="margin:8px 0 4px 0">Sales Report 2021 — Dashboard (2)</h3>
+              <div class="lead" style="color:var(--muted)">Comparative sales KPIs and channel performance for 2021.</div>
+              <div style="margin-top:8px"><span class="tool">Power BI</span></div>
+              <div><a class="repo" href="PLACEHOLDER_GITHUB_LINK_5" target="_blank">GitHub (placeholder)</a></div>
+            </article>
+
+            <!-- Consultants Dashboard -->
+            <article class="project fade">
+              <img src="./consultants.png" alt="Consultants Dashboard" />
+              <h3 style="margin:8px 0 4px 0">Consultants Dashboard</h3>
+              <div class="lead" style="color:var(--muted)">Performance and utilization analytics for consultants.</div>
+              <div style="margin-top:8px"><span class="tool">Power BI</span></div>
+              <div><a class="repo" href="PLACEHOLDER_GITHUB_LINK_6" target="_blank">GitHub (placeholder)</a></div>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Excel dashboard (placeholder below)</div>
+              <img src="./excel-dashboard-placeholder.png" alt="Excel Dashboard placeholder" style="margin-top:8px;border-radius:6px;width:100%;height:110px;object-fit:cover;border:1px solid rgba(255,255,255,0.02)" />
             </article>
 
           </div>
-        </section>
+        </div>
 
-        <section id="skills">
-          <h2>Skills</h2>
-          <div class="card" style="margin-top:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);">
-            <div class="skills" style="padding:12px">
-              <div class="skill">Power BI</div>
-              <div class="skill">Excel</div>
-              <div class="skill">SQL</div>
-              <div class="skill">PowerPoint</div>
-              <div class="skill">Data Modeling</div>
-              <div class="skill">DAX</div>
-              <div class="skill">Dashboard Design</div>
-              <div class="skill">Storytelling with Data</div>
+        <!-- testimonials -->
+        <div id="testimonials" style="margin-top:18px">
+          <h2 class="title">Testimonials</h2>
+          <div class="testimonials" style="margin-top:8px">
+            <div class="quote fade">
+              <div class="qtitle">Yousuph Edu</div>
+              <div class="lead" style="color:var(--muted)">
+                Adeola is a thorough-bred professional with eyes on deadlines. She is very diligent, meticulous and organized. She relates well with her superior, peers and subordinate and is the go-to person in any position she finds herself... I have no reservations in recommending her to any willing employer.
+              </div>
+            </div>
+
+            <div class="quote fade">
+              <div class="qtitle">Soji Jolugba</div>
+              <div class="lead" style="color:var(--muted)">
+                I worked with Adeola in a great financial institution for about a decade. In her I found a fine blend of business friendliness and stern seriousness... She is highly recommended.
+              </div>
+            </div>
+
+            <div class="quote fade" style="grid-column:1 / -1">
+              <div class="qtitle">Gabriel Agbola</div>
+              <div class="lead" style="color:var(--muted)">
+                I have known and worked with Adeola for over 5 years. An astute professional, Adeola is very tenacious and will always ensure whatever she handles are executed excellently in a timely fashion... I therefore have no reservation whatsoever in recommending her.
+              </div>
+            </div>
+
+            <div class="quote fade">
+              <div class="qtitle">Remi Pampam, CSCP, SCMP</div>
+              <div class="lead" style="color:var(--muted)">
+                Adeola showed leadership qualities with her dedication, thoroughness, and attention to details... She comes highly recommended by me as she will be a valuable asset to any organization.
+              </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section id="testimonials">
-          <h2>Testimonials</h2>
-          <div class="testimonials" style="margin-top:8px">
-            <div class="quote">“Adeola combines technical mastery with clear storytelling — dashboards are always actionable and beautifully designed.”<div class="muted" style="margin-top:8px">— Colleague, Analytics Team</div></div>
-            <div class="quote">“Fast turnaround on a complex dataset — turned messy data into clear insights overnight.”<div class="muted" style="margin-top:8px">— Project Manager</div></div>
-          </div>
-        </section>
-
-        <section id="contact">
-          <h2>Contact</h2>
+        <!-- contact -->
+        <div id="contact" style="margin-top:18px">
+          <h2 class="title">Contact</h2>
           <div class="contact-grid" style="margin-top:8px">
             <div class="card">
               <h3 style="margin-top:0">Get in touch</h3>
-              <p class="muted">I’m available for consulting, freelance or full-time roles. Use the contact form or email me directly.</p>
-              <div style="margin-top:12px">
-                <div class="muted">Email: <a href="mailto:dayolah@gmail.com">dayolah@gmail.com</a></div>
-                <div class="muted" style="margin-top:6px">LinkedIn: <a href="https://www.linkedin.com/in/adeola-enomhensike">/in/adeola-enomhensike</a></div>
-                <div class="muted" style="margin-top:6px">GitHub: <a href="https://github.com/dayolah-arch">github.com/dayolah-arch</a></div>
+              <p class="lead" style="color:var(--muted)">I’m available for consulting, freelance or full-time roles. Use the contact form or email me directly.</p>
+              <div style="margin-top:12px;color:var(--muted)">
+                <div><strong>Email:</strong> <a href="mailto:dayolah@gmail.com">dayolah@gmail.com</a></div>
+                <div style="margin-top:6px"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adeola-enomhensike" target="_blank">/in/adeola-enomhensike</a></div>
+                <div style="margin-top:6px"><strong>GitHub:</strong> <a href="https://github.com/dayolah-arch" target="_blank">github.com/dayolah-arch</a></div>
               </div>
               <div style="margin-top:12px"><a class="btn" href="PLACEHOLDER_RESUME_LINK" download>Download Resume</a></div>
             </div>
 
             <div class="card">
-              <form id="contactForm">
-                <label class="muted">Name</label>
-                <input name="name" required />
+              <!-- Formspree form: replace the action URL with your Formspree form endpoint -->
+              <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+                <label class="lead">Name</label>
+                <input type="text" name="name" required />
 
-                <label class="muted" style="margin-top:8px">Email</label>
-                <input name="email" type="email" required />
+                <label class="lead" style="margin-top:8px">Email</label>
+                <input type="email" name="_replyto" required />
 
-                <label class="muted" style="margin-top:8px">Message</label>
-                <textarea name="message" rows="5" required></textarea>
+                <label class="lead" style="margin-top:8px">Message</label>
+                <textarea name="message" rows="6" required></textarea>
 
-                <div style="margin-top:10px"><button type="submit">Send Message</button></div>
+                <!-- optional: redirect after submit (Uncomment and set) -->
+                <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+
+                <div style="margin-top:10px">
+                  <button type="submit">Send Message</button>
+                </div>
+                <div id="formStatus" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
               </form>
-              <div id="formStatus" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
             </div>
           </div>
-        </section>
+        </div>
 
         <footer>© <span id="year"></span> Adeola Enomhensike — Data Strategist</footer>
-      </main>
-    </div>
+      </section>
+    </main>
   </div>
 
   <script>
-    // small helpers: update year
+    // set year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // contact form: open mailto as fallback
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-      if(!name||!email||!message){document.getElementById('formStatus').textContent='Please fill all fields.';return}
-      const subject = encodeURIComponent('Portfolio contact from '+name);
-      const body = encodeURIComponent('Name: '+name+'
-Email: '+email+'
-
-'+message);
-      // open mail client
-      window.location.href = `mailto:dayolah@gmail.com?subject=${subject}&body=${body}`;
-      document.getElementById('formStatus').textContent='Opening your mail client...';
-      setTimeout(()=>{document.getElementById('formStatus').textContent='If your mail client did not open, please email dayolah@gmail.com directly.'},3000);
-    });
-
-    // Smooth scrolling for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',function(e){
+    // Smooth scroll for same-page nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
         e.preventDefault();
-        const t = document.querySelector(this.getAttribute('href'));
-        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+        const el = document.querySelector(this.getAttribute('href'));
+        if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
       });
     });
+
+    // Formspree fallback handling & status message
+    (function(){
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      form.addEventListener('submit', function(e){
+        // If action still placeholder, show instruction
+        if(form.action.includes('your-form-id')){
+          e.preventDefault();
+          status.textContent = 'Please replace the Formspree action URL with your form endpoint (see README).';
+          return;
+        }
+        status.textContent = 'Sending...';
+        // Let the browser submit the form to Formspree (no JS fetch required).
+        // After submit, Formspree will redirect or show confirmation per your Formspree settings.
+      });
+    })();
   </script>
 </body>
 </html>
